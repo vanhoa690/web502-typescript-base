@@ -1,38 +1,37 @@
-function List() {
+function ListPage() {
   return (
-    <div>
-      <h1>Danh sách</h1>
-      <table className="table table-hover table-bordered table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="p-6">
+      <h1 className="text-2xl font-semibold mb-6">Danh sách</h1>
+
+      <div className="overflow-x-auto">
+        <table className="w-full border border-gray-300 rounded-lg">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="px-4 py-2 border border-gray-300 text-left">ID</th>
+              <th className="px-4 py-2 border border-gray-300 text-left">
+                Name
+              </th>
+              <th className="px-4 py-2 border border-gray-300 text-left">
+                Description
+              </th>
+              <th className="px-4 py-2 border border-gray-300 text-left">
+                Actions
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr className="hover:bg-gray-50">
+              <td className="px-4 py-2 border border-gray-300">1</td>
+              <td className="px-4 py-2 border border-gray-300">Mark</td>
+              <td className="px-4 py-2 border border-gray-300">Description</td>
+              <td className="px-4 py-2 border border-gray-300">Edit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
 
-export default List;
+export default ListPage;
