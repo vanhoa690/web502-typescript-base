@@ -1,0 +1,27 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Mưa Đỏ 1",
+      "poster": "https://example.com/mua-do.jpg ",
+      "duration": 120,
+      "category": "Hành động"
+    },
+    {
+      "title": "ten",
+      "id": 2
+    },
+    {
+      "title": "ten 1",
+      "id": 3
+    },
+    {
+      "title": "harry poter",
+      "poster": "image src ",
+      "duration": 120,
+      "category": "Hành động",
+      "id": 4
+    }
+  ],
+  "users": []
+}
