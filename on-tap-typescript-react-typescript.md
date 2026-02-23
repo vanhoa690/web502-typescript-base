@@ -178,9 +178,9 @@ course?.title;
 ```ts
 const course = {
   id: 1,
-  name: "ReactJS Cơ Bản",
-  credit: 3,
-  category: "Chuyên ngành",
-  teacher: "Nguyễn Văn A",
+  title: "ReactJS Cơ Bản",
+  price: 100000,
+  category: "Javascript",
+  year: 2026,
 };
 ```
