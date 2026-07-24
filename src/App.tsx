@@ -17,18 +17,6 @@ function App() {
             <Link to="#" className="hover:text-gray-200">
               Danh sách
             </Link>
-            <Link to="#" className="hover:text-gray-200">
-              Thêm mới
-            </Link>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-6">
-            <Link to="#" className="hover:text-gray-200">
-              Đăng nhập
-            </Link>
-            <Link to="#" className="hover:text-gray-200">
-              Đăng ký
-            </Link>
           </div>
         </div>
       </nav>
