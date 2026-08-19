@@ -1,4 +1,12 @@
 {
-  "students": [],
+  "students": [
+    {
+      "id": "1",
+      "fullName": "Nguyễn Văn A",
+      "year": 2005,
+      "avatar": "https://example.com/images/nguyenvana.jpg",
+      "major": "Marketing"
+    }
+  ],
   "users": []
 }
