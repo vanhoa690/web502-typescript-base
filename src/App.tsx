@@ -1,5 +1,11 @@
 import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import ListPage from "./pages/ListPage";
+import AddPage from "./pages/AddPage";
+import EditPage from "./pages/EditPage";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
@@ -11,11 +17,17 @@ function App() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/" className="hover:text-gray-200">
               Trang chủ
             </Link>
-            <Link to="#" className="hover:text-gray-200">
+            <Link to="/add" className="hover:text-gray-200">
               Danh sách
+            </Link>
+            <Link to="/register" className="hover:text-gray-200">
+              Register
+            </Link>
+            <Link to="/login" className="hover:text-gray-200">
+              login
             </Link>
           </div>
         </div>
@@ -24,6 +36,16 @@ function App() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB502</h1>
+        <Routes>
+          <Route path="/" element={<ListPage />}></Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/add" element={<AddPage />}></Route>
+            <Route path="/edit/:id" element={<EditPage />}></Route>
+          </Route>
+
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
       </div>
 
       <Toaster />

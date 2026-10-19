@@ -1,21 +1,54 @@
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+interface JobData {
+  title: string;
+  company: string;
+}
 function AddPage() {
+  const nav = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<JobData>();
+
+  function addJob(data: JobData) {
+    axios.post("http://localhost:3000/jobs", data).then(() => {
+      alert("thanh cong");
+      nav("/");
+    });
+  }
   return (
     <div className="p-6">
       <h1 className="text-2xl font-semibold mb-6">Thêm mới</h1>
 
-      <form className="space-y-6">
+      <form className="space-y-6" onSubmit={handleSubmit(addJob)}>
         {/* Text input */}
         <div>
           <label htmlFor="text" className="block font-medium mb-1">
-            Text
+            Title
           </label>
           <input
+            {...register("title", { required: "Nhap title" })}
+            type="text"
+            id="text"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors?.title && <span>{errors?.title.message}</span>}
+        </div>
+        <div>
+          <label htmlFor="text" className="block font-medium mb-1">
+            company
+          </label>
+          <input
+            {...register("company", { required: "Nhap company" })}
             type="text"
             id="text"
             className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-
         {/* Select */}
         <div>
           <label htmlFor="selectOption" className="block font-medium mb-1">

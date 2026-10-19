@@ -1,12 +1,36 @@
 {
-  "students": [
+  "users": [
     {
-      "id": "1",
-      "fullName": "Nguyễn Văn A",
-      "year": 2005,
-      "code": "ph6688",
-      "major": "Marketing"
+      "email": "hoadv21@fpt.edu.vn",
+      "password": "$2a$10$Uo6tL53QPvV64acETA2s8.pFwrsQAIwyV483VNq3EFb1FWDRU9yLm",
+      "title": "",
+      "company": "",
+      "id": 1
+    },
+    {
+      "email": "hoadv212@fpt.edu.vn",
+      "password": "$2a$10$A9.YOL1HycDbgnKqi7aUue9FU0WuY4n.eKoiMhK2w/PlifVLlmo5i",
+      "id": 2
+    },
+    {
+      "email": "hoadv2133@fpt.edu.vn",
+      "password": "$2a$10$IYDRCoK5siXG4Cg3edDJyON/Aa9eeeEVySUy3ctWuOUOl7fh3apzq",
+      "id": 3
     }
   ],
-  "users": []
+  "jobs": [
+    {
+      "id": "2",
+      "title": "Backend Developer update",
+      "company": "CMC Global",
+      "location": "Hà Nội",
+      "salary": 18000000,
+      "employmentType": "Full-time",
+      "description": "Phát triển API bằng Node.js."
+    },
+    {
+      "title": "ten",
+      "id": "tno9KtR"
+    }
+  ]
 }
